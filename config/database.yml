@@ -1,0 +1,22 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: blocmarks_development
+  pool: 5
+  username: kc
+  password: 
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: blocmarks_test
+  pool: 5
+  username: kc
+  password: 
+
+#TODO: need to set this up for heroku
+production:
+  adapter: postgresql
+  host: postgres://veanjiuudszwcy:1ELs7COyaU1Y5deiM-4HJOaNsd@ec2-54-243-125-46.compute-1.amazonaws.com:5432/d76hjh3imjsham
+  username: 
+  database: blocmarks_production
