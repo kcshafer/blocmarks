@@ -1,0 +1,10 @@
+<u><%= button_to "New Topic", new_topic_path, method: :get, class: "btn btn-primary" %></u>
+<br/>
+<ul>
+    <% @topics.each do |t| %>
+        <li><%= link_to "##{t.title}", topic_path(t), method: :get %></li>
+        <% t.bookmarks.each do |b| %>
+            <img src="http://i.stack.imgur.com/yZlqh.png" height="75"  class="bookmark" />
+        <% end %>
+    <% end %>
+</ul>

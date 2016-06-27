@@ -1,0 +1,9 @@
+<u>#<%= @topic.title %></u>
+<br/>
+<% if can_edit(@topic) %>
+    <%= button_to "Edit", edit_topic_path(@topic), method: :get, class: "btn btn-primary" %>
+    <%= button_to "Delete", topic_path(@topic), method: :delete, class: "btn btn-primary" %>
+<% end %>
+<% @topic.bookmarks.each do |b| %>
+    <img src="http://i.stack.imgur.com/yZlqh.png" height="75" />
+<% end %>
