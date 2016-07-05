@@ -1,0 +1,7 @@
+<% if can_edit(@bookmark) %>
+	<%= button_to "Edit", edit_topic_bookmark_path(@bookmark.topic, @bookmark), method: :get, class: "btn btn-primary" %>
+	<%= button_to "Delete", topic_bookmark_path(@bookmark.topic, @bookmark), method: :delete, class: "btn btn-primary" %>
+<% end %>
+<b>Bookmark Name: </b><%= @bookmark.name %>
+<br/>
+<b>Bookmark Url: </b><%= link_to @bookmark.url, @bookmark.url %>

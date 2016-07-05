@@ -5,5 +5,8 @@
     <%= button_to "Delete", topic_path(@topic), method: :delete, class: "btn btn-primary" %>
 <% end %>
 <% @topic.bookmarks.each do |b| %>
-    <img src="http://i.stack.imgur.com/yZlqh.png" height="75" />
+	<div class="bookmark-block">	
+		<img src="http://i.stack.imgur.com/yZlqh.png" height="75" />
+		<span class="bookmark_title"><%= link_to "#{b.name}", topic_bookmark_path(@topic, b), method: :get %></span>
+	</div>
 <% end %>
