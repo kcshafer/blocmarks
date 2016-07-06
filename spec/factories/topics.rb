@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :topic do
-    title "My Topic"
+    title "test"
     user
   end
 end
